@@ -4,10 +4,6 @@ on:
   push:
     branches: [ "develop" ]
   pull_request:
-
-env:
-  TF_VAR_aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  TF_VAR_aws_secret_key_id: ${{ secrets.AWS_SECRET_KEY_ID }}
   
 jobs:
   build:
@@ -16,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: hashicorp/setup-terraform@v2
+        env:
+          TF_VAR_aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          TF_VAR_aws_secret_key_id: ${{ secrets.AWS_SECRET_KEY_ID }}
       - run: terraform init
       - name: Terraform plan
         id: plan
