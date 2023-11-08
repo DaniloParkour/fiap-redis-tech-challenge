@@ -1,5 +1,5 @@
 resource "aws_elasticache_cluster" "redis" {
-  cluster_id              = "redis-cluster-novo-2"
+  cluster_id              = "redis-cluster-novamente"
   engine                  = "redis"
   node_type               = "cache.t2.micro"
   port                    = "11211"
