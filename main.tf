@@ -1,9 +1,7 @@
-variable "aws_access_key_id" {
-  description = "AWS Access Key ID"
-}
-
-variable "aws_secret_key_id" {
-  description = "AWS Secret Key"
+provider "aws" {
+  region = "us-east-1"
+  access_key = "AKIATU5PCOHSE5TXWM7C"
+  secret_key = "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"
 }
 
 resource "aws_elasticache_cluster" "redis" {
