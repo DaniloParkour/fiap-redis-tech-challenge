@@ -5,9 +5,6 @@ variable "aws_access_key_id" {
 variable "aws_secret_key_id" {
   description = "AWS Secret Key"
 }
-provider "aws" {
-  region = "us-east-1"
-}
 
 resource "aws_elasticache_cluster" "redis" {
   cluster_id              = "redis-cluster"
