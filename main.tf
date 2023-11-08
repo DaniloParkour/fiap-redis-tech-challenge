@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = ""
-  secret_key = ""
+  access_key = "AKIATU5PCOHSE5TXWM7C"
+  secret_key = "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"
 }
 
 resource "aws_elasticache_cluster" "redis" {
